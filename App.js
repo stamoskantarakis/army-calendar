@@ -1,6 +1,6 @@
 import * as React from 'react';
 // import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 // import { Provider } from 'react-redux';
 // import { createStore } from 'redux';
 import { NavigationContainer } from '@react-navigation/native';
@@ -12,16 +12,31 @@ import ResultScreen from './app/screens/ResultScreen'
 // import 'react-native-gesture-handler';
 
 
+
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{
+        headerStyle: {
+          backgroundColor: '#008bd0',
+          borderBottomWidth: 2,
+          borderBottomColor:"yellow"
+          
+          
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+          marginLeft:50
+        },
+      }}>
       <Stack.Screen
-        name="Καλώς ήρθες Σμηνίτη!"
-        component={HomeScreen}
-      />
+          name="Home"
+          component={HomeScreen}
+          options={{ title: 'Το Ημερολόγιο του Σμηνίτη' }}
+        />
       <Stack.Screen
         name="DatePicker"
         component={DatePickerScreen}
