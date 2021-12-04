@@ -20,13 +20,13 @@ export default function App() {
     <NavigationContainer>
     <Stack.Navigator screenOptions={{
         headerStyle: {
-          backgroundColor: '#008bd0',
+          backgroundColor: '#20429b',
           borderBottomWidth: 2,
-          borderBottomColor:"yellow"
+          borderBottomColor:"#fdc70a"
           
           
         },
-        headerTintColor: '#fff',
+        headerTintColor: '#fdc70a',
         headerTitleStyle: {
           fontWeight: 'bold',
           marginLeft:50
@@ -40,10 +40,12 @@ export default function App() {
       <Stack.Screen
         name="DatePicker"
         component={DatePickerScreen}
+        options={{ title: 'Το Ημερολόγιο του Σμηνίτη' }}
       />
       <Stack.Screen
         name="Result"
         component={ResultScreen}
+        options={{ title: 'Το Ημερολόγιο σου' }}
       />
     </Stack.Navigator>
   </NavigationContainer>
