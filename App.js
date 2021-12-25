@@ -9,6 +9,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './app/screens/HomeScreen';
 import DatePickerScreen from './app/screens/DatePickerScreen'
 import ResultScreen from './app/screens/ResultScreen'
+
 // import 'react-native-gesture-handler';
 
 
@@ -20,13 +21,11 @@ export default function App() {
     <NavigationContainer>
     <Stack.Navigator screenOptions={{
         headerStyle: {
-          backgroundColor: '#20429b',
+          backgroundColor: '#134c90',
           borderBottomWidth: 2,
-          borderBottomColor:"#fdc70a"
-          
-          
+          borderBottomColor:"#011f4b",
         },
-        headerTintColor: '#fdc70a',
+        headerTintColor: '#fff',
         headerTitleStyle: {
           fontWeight: 'bold',
           marginLeft:50
@@ -35,12 +34,13 @@ export default function App() {
       <Stack.Screen
           name="Home"
           component={HomeScreen}
+          
           options={{ title: 'Το Ημερολόγιο του Σμηνίτη' }}
         />
       <Stack.Screen
         name="DatePicker"
         component={DatePickerScreen}
-        options={{ title: 'Το Ημερολόγιο του Σμηνίτη' }}
+        options={{ title: '' }}
       />
       <Stack.Screen
         name="Result"
@@ -58,5 +58,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    
+    
   },
 });

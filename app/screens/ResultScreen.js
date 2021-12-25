@@ -53,8 +53,8 @@ function ResultScreen({ navigation, route  }) {
              // Enable the option to swipe between months. Default = false
              enableSwipeMonths={true}
              theme={{
-                backgroundColor: '#20429b',
-                calendarBackground: '#20429b',
+                backgroundColor: '#011f4b',
+                calendarBackground: '#011f4b',
                 textSectionTitleColor: 'red',
                 textSectionTitleDisabledColor: 'red',
                 selectedDayBackgroundColor: 'red',
@@ -66,8 +66,8 @@ function ResultScreen({ navigation, route  }) {
                 selectedDotColor: 'red',
                 arrowColor: 'orange',
                 disabledArrowColor: '#d9e1e8',
-                monthTextColor: 'blue',
-                indicatorColor: 'blue',
+                monthTextColor: '#011f4b',
+                indicatorColor: '#011f4b',
                 textDayFontFamily: 'monospace',
                 textMonthFontFamily: 'monospace',
                 textDayHeaderFontFamily: 'monospace',
@@ -76,7 +76,9 @@ function ResultScreen({ navigation, route  }) {
                 textDayHeaderFontWeight: '300',
                 textDayFontSize: 16,
                 textMonthFontSize: 16,
-                textDayHeaderFontSize: 16
+                textDayHeaderFontSize: 16,
+                
+
               }}
  
 />
@@ -92,17 +94,25 @@ const styles = StyleSheet.create({
         flex: 1, 
         alignItems: 'center', 
         justifyContent: 'center',
-        flexDirection: "column"    
+        flexDirection: "column",
+        
+
     },
     backgroundImage:{
         height:1000, 
         width:1000,   
+        
     },
     calendar:{
-        marginTop:300,
+        marginTop: 120,
         height:400,
         borderBottomWidth:2,
-        borderBottomColor:"yellow"
+        borderBottomColor:'#011f4b',
+        borderBottomLeftRadius: 4,
+        borderBottomRightRadius : 4,
+        opacity:0.8
+
+        
     }
 })
 
