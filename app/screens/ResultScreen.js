@@ -4,36 +4,41 @@ import {Calendar, CalendarList, Agenda} from 'react-native-calendars';
 import { useSelector} from 'react-redux';
 
 function ResultScreen({ navigation, route  }) {
-    const test = useSelector(state => state.reducer.daysIn);
-    const test1 = useSelector(state => state.reducer.daysOut);
-    const test2 = useSelector(state => state.reducer.firstDate);
-    console.log(test);
-    console.log(test1);
-    console.log(test2);
+    
+    const daysIn = useSelector(state => state.reducer.daysIn);
+    const daysOut = useSelector(state => state.reducer.daysOut);
+    const firstDate = useSelector(state => state.reducer.firstDate);
+    // console.log("___________");
+    // console.log(firstDate);
+
+    //Loop that creates the logic of the calendar
+    let someDate = new Date();
+    let numberOfDaysToAdd = 2;
+    let testDate = firstDate.slice(8,10);
+    console.log("___________");
+    console.log(testDate);
+    someDate.setDate(testDate + numberOfDaysToAdd);
+    console.log("___________");
+    console.log(someDate);
 
 
+
+    //Helpful Logic
+    const test = {
+        [firstDate] :{disabled: true, startingDay: true, color: 'green', endingDay: true}
+    };
+    const test1 = {
+        "2021-12-20" :{disabled: true, startingDay: true, color: 'red', endingDay: true}
+    };
+    const datesOfArmyCalendar = Object.assign({},test,test1)
+    //
 
     return (
         <ImageBackground style={styles.imageStyle} source={require("../assets/background.jpg")}>
             <View >
             <Calendar
-                markingType='multi-period'
-                markedDates={{
-                  '2021-12-14': {
-                    periods: [
-                      {startingDay: false, endingDay: true, color: '#5f9ea0'},
-                      {startingDay: false, endingDay: true, color: '#ffa500'},
-                      {startingDay: true, endingDay: false, color: '#f0e68c'}
-                    ]
-                  },
-                  '2021-12-15': {
-                    periods: [
-                      {startingDay: true, endingDay: false, color: '#ffa500'},
-                      {color: 'transparent'},
-                      {startingDay: false, endingDay: false, color: '#f0e68c'}
-                    ]
-                  }
-                }}
+                markingType={'period'}
+                markedDates={datesOfArmyCalendar}
             />
             </View>
         </ImageBackground>
