@@ -24,6 +24,7 @@ export default function App() {
           backgroundColor: '#134c90',
           borderBottomWidth: 2,
           borderBottomColor:"#011f4b",
+          
         },
         headerTintColor: '#fff',
         headerTitleStyle: {
