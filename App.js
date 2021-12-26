@@ -1,5 +1,8 @@
 import * as React from 'react';
 // import { StatusBar } from 'expo-status-bar';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import reducer from './Reducer';
 import { StyleSheet, Text, View, Image } from 'react-native';
 // import { Provider } from 'react-redux';
 // import { createStore } from 'redux';
@@ -13,15 +16,19 @@ import ResultScreen from './app/screens/ResultScreen'
 // import 'react-native-gesture-handler';
 
 
-
+const store = createStore(
+  reducer /* preloadedState, */,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+)
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
+    <Provider store={store}>
     <NavigationContainer>
     <Stack.Navigator screenOptions={{
         headerStyle: {
-          backgroundColor: '#134c90',
+          backgroundColor: '#0c62c5',
           borderBottomWidth: 2,
           borderBottomColor:"#011f4b",
           
@@ -50,6 +57,7 @@ export default function App() {
       />
     </Stack.Navigator>
   </NavigationContainer>
+  </Provider>
   );
 }
 
