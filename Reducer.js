@@ -15,8 +15,8 @@ const Reducer= (state = INITIAL_STATE, action) => {
         state.daysOut = action.payload;
         return state;
     case 'RECEIVE_FIRST_DATE':
-        const temp = JSON.stringify(action.payload).slice(1,11);
-        state.firstDate = temp;
+        // const temp = JSON.stringify(action.payload).slice(1,11);
+        state.firstDate = action.payload;
         return state;    
     default:
       return state

@@ -4,28 +4,29 @@ import {Calendar, CalendarList, Agenda} from 'react-native-calendars';
 import { useSelector} from 'react-redux';
 
 function ResultScreen({ navigation, route  }) {
-    
+
+  
     const daysIn = useSelector(state => state.reducer.daysIn);
     const daysOut = useSelector(state => state.reducer.daysOut);
     const firstDate = useSelector(state => state.reducer.firstDate);
-    // console.log("___________");
-    // console.log(firstDate);
+    
 
     //Loop that creates the logic of the calendar
-    let someDate = new Date();
-    let numberOfDaysToAdd = 2;
-    let testDate = firstDate.slice(8,10);
-    console.log("___________");
-    console.log(testDate);
-    someDate.setDate(testDate + numberOfDaysToAdd);
-    console.log("___________");
-    console.log(someDate);
+
+    let numberOfDaysToAdd = parseInt(daysIn);
+    let date = new Date(firstDate);
+    let newdateOfUser = new Date(date);
+    newdateOfUser.setDate(newdateOfUser.getDate() + numberOfDaysToAdd);
+    console.log(newdateOfUser.toString);
+    
+    const temp = newdateOfUser.toISOString().substring(0, 10);
+    console.log(temp);
 
 
 
     //Helpful Logic
     const test = {
-        [firstDate] :{disabled: true, startingDay: true, color: 'green', endingDay: true}
+        [temp] :{disabled: true, startingDay: true, color: 'green', endingDay: true}
     };
     const test1 = {
         "2021-12-20" :{disabled: true, startingDay: true, color: 'red', endingDay: true}
