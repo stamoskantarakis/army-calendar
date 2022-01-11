@@ -1,9 +1,6 @@
 import React from 'react';
 import {StyleSheet, View, ImageBackground, Image, Text, Platform, StatusBar, ImageBackgroundBase} from 'react-native';
 import { Button, Card } from 'react-native-elements';
-import { BackgroundImage } from 'react-native-elements/dist/config';
-import Icon from 'react-native-vector-icons/FontAwesome';
-
 
 function HomeScreen({ navigation, route }) {
 
@@ -15,10 +12,6 @@ function HomeScreen({ navigation, route }) {
                         source={require(("../assets/calendar.png"))}
                     />
                     <Text style={styles.mainText}> Δημιούργησε με το πάτημα ενος κουμπιού το προσωπικό σου ημερολόγιο και προγραμμάτισε τις επόμενες σου διακοπές!</Text>
-                    {/* <Icon name='check-circle'  type='font-awesome'  color='#0c62c5' style={{textAlign:'center', marginTop:20, fontSize:25}} />
-                    <Text style={styles.mainText}> Βαριέσαι να κάνεις τους υπολογίσμους αφού σε παει 3 ΜΕΣΑ και 13 ΕΞΩ;</Text>
-                    <Icon name='check-circle'  type='font-awesome'  color='#0c62c5' style={{textAlign:'center', marginTop:20, fontSize:25}} />
-                    <Text style={styles.mainText}> Τότε πάτα το κουμπί, συμπλήρωσε τα κενά και δημιούργησε το δικό σου ημερολόγιο!</Text> */}
                     <Button  title="Συνέχεια" type="solid" icon={{name: "arrow-right", size: 25, color: "white",}} iconRight="true" buttonStyle={styles.button} titleStyle={styles.titleButton} onPress={() =>
                         navigation.navigate('DatePicker')}/>
                         
