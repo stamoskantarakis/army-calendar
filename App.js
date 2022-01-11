@@ -28,7 +28,7 @@ export default function App() {
     <NavigationContainer>
     <Stack.Navigator screenOptions={{
         headerStyle: {
-          backgroundColor: '#0c62c5',
+          backgroundColor: '#008cd1',
           borderBottomWidth: 2,
           borderBottomColor:"#011f4b",
           
@@ -36,7 +36,8 @@ export default function App() {
         headerTintColor: '#fff',
         headerTitleStyle: {
           fontWeight: 'bold',
-          marginLeft:50
+          marginLeft:50,
+          fontStyle:'italic'
         },
       }}>
       <Stack.Screen

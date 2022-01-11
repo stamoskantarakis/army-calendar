@@ -10,7 +10,7 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 
 function DatePickerScreen({ navigation, route  }) {
     const dispatch = useDispatch()
-    const [date, setDate] = useState(new Date(1598051730000));
+    const [date, setDate] = useState(new Date());
     const [mode, setMode] = useState('date');
     const [show, setShow] = useState(false);
     const [daysIn, onChangeDaysIn] = React.useState(null);
@@ -46,7 +46,7 @@ function DatePickerScreen({ navigation, route  }) {
 
     return (
         <ImageBackground style={styles.imageStyle} source={require("../assets/background.jpg")}>
-            <View >
+            <View style={{marginBottom: 50}}>
             <Text style={styles.mainText}> Πότε μπήκες στο στρατόπεδο?</Text>
             <Button onPress={showDatepicker} title="Επιλογή" type="solid" icon={{name: "calendar",type: 'font-awesome', size: 15, color: "white",}} iconRight="true" buttonStyle={styles.button} titleStyle={styles.titleButton}/>
             {show && (
@@ -75,7 +75,7 @@ function DatePickerScreen({ navigation, route  }) {
                 placeholder="Συμπλήρωσε"
                 keyboardType="numeric"
             />
-             <Button onPress={showDatepicker} title="Συνέχεια" type="solid" icon={{name: "arrow-right",type: 'font-awesome', size: 10, color: "white",}} iconRight="true" buttonStyle={styles.button} titleStyle={styles.titleButton}
+             <Button onPress={showDatepicker} title="Συνέχεια" type="solid" icon={{name: "arrow-right",type: 'font-awesome', size: 10, color: "white",}} iconRight="true" buttonStyle={styles.nextButton} titleStyle={styles.titleButton}
               onPress={() =>
                         onFinalButtonPress()}/>
             </View>
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
         width:"100%", 
         height:"100%",
         justifyContent: 'center',
-        backgroundColor:"#134c90",
+        backgroundColor:"#008cd1",
         
     },
     basicBackground : {
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
         alignItems: 'center', 
         justifyContent: 'center',
         flexDirection: "column",
-        backgroundColor: "#3396c1",
+        backgroundColor: "#008cd1",
         
 
     },
@@ -104,19 +104,33 @@ const styles = StyleSheet.create({
         fontWeight: '700',
         fontFamily: 'Roboto',
         textAlign:"center",
-        color:"#0c62c9",
-        marginTop: 15,
+        color:"white",
+        marginTop: 30,
         fontSize: 15,
         right:4,
         fontStyle:'italic',
+        textShadowColor: 'rgba(0, 0, 0, 1)',
+        textShadowOffset: {width: 1, height: 1},
+        textShadowRadius: 3
         
         
     },
     button:{
         marginTop:20,
-        backgroundColor: "#0c62c5",
-        borderBottomWidth: 0,
-        borderBottomColor:"#0c62c5",
+        backgroundColor: "#008cd1",
+        borderWidth: 1,
+        borderColor:"black",
+        width: 120,
+        height:42,
+        left:140,
+
+        
+    },
+    nextButton:{
+        marginTop:120,
+        backgroundColor: "#008cd1",
+        borderWidth: 1,
+        borderColor:"black",
         width: 120,
         height:42,
         left:140,

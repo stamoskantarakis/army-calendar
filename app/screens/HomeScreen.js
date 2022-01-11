@@ -14,12 +14,12 @@ function HomeScreen({ navigation, route }) {
                         style={styles.underHeaderImage}
                         source={require(("../assets/calendar.png"))}
                     />
-                    <Text style={styles.mainText}> Σκέφτεσαι τις Χριστουγενίατικες Διακοπές σου αλλά δεν γνωρίζεις αν θα είσαι μέσα στο στρατόπεδο?</Text>
+                    <Text style={styles.mainText}> Δημιούργησε με το πάτημα ενος κουμπιού το προσωπικό σου ημερολόγιο και προγραμμάτισε τις επόμενες σου διακοπές!</Text>
+                    {/* <Icon name='check-circle'  type='font-awesome'  color='#0c62c5' style={{textAlign:'center', marginTop:20, fontSize:25}} />
+                    <Text style={styles.mainText}> Βαριέσαι να κάνεις τους υπολογίσμους αφού σε παει 3 ΜΕΣΑ και 13 ΕΞΩ;</Text>
                     <Icon name='check-circle'  type='font-awesome'  color='#0c62c5' style={{textAlign:'center', marginTop:20, fontSize:25}} />
-                    <Text style={styles.mainText}> Βαριέσαι να κάνεις τους υπολογίσμους αφού σε παει 3 ΜΕΣΑ και 13 ΕΞΩ?</Text>
-                    <Icon name='check-circle'  type='font-awesome'  color='#0c62c5' style={{textAlign:'center', marginTop:20, fontSize:25}} />
-                    <Text style={styles.mainText}> Τότε πάτα το κουμπί, συμπλήρωσε τα κενά και δημιούργησε το δικό σου ημερολόγιο!</Text>
-                    <Button  title="Συνέχεια" type="solid" icon={{name: "arrow-right", size: 30, color: "white",}} iconRight="true" buttonStyle={styles.button} titleStyle={styles.titleButton} onPress={() =>
+                    <Text style={styles.mainText}> Τότε πάτα το κουμπί, συμπλήρωσε τα κενά και δημιούργησε το δικό σου ημερολόγιο!</Text> */}
+                    <Button  title="Συνέχεια" type="solid" icon={{name: "arrow-right", size: 25, color: "white",}} iconRight="true" buttonStyle={styles.button} titleStyle={styles.titleButton} onPress={() =>
                         navigation.navigate('DatePicker')}/>
                         
                 </View>
@@ -36,18 +36,18 @@ const styles = StyleSheet.create({
         
     },
     underHeaderImage:{
-        width:"80%", 
-        height:"30%",
-        left:30,
+        width:"100%", 
+        height:"45%",
+        left:0,
         marginBottom:20,
         marginTop:20
         
     },
     button:{
-        marginTop:25,
-        backgroundColor: "#0c62c5",
-        borderBottomWidth: 0,
-        borderBottomColor:"#0c62c5",
+        marginTop:50,
+        backgroundColor: "#008cd1",
+        borderWidth: 1,
+        borderColor:"black",
         width: 120,
         left:60
         
@@ -58,10 +58,12 @@ const styles = StyleSheet.create({
         marginLeft: 20,
         fontSize: 15,
         fontFamily: 'Roboto',
+        textShadowColor: 'rgba(0, 0, 0, 1)',
+        textShadowOffset: {width: 1, height: 1},
+        textShadowRadius: 3
         
     },
     aboveButton:{
-             marginBottom:50,
              width:"60%",
              left:80
              
@@ -70,11 +72,14 @@ const styles = StyleSheet.create({
         fontWeight: '700',
         fontFamily: 'Roboto',
         textAlign:"center",
-        color:"#0c62c9",
+        color:"white",
         marginTop: 10,
         fontSize: 15,
         right:4,
         fontStyle:'italic',
+        textShadowColor: 'rgba(0, 0, 0, 1)',
+        textShadowOffset: {width: 1, height: 1},
+        textShadowRadius: 3
         
         
     }
