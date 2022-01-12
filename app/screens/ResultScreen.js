@@ -1,7 +1,8 @@
 import React from 'react';
-import {StyleSheet, View, ImageBackground, Image, Button, Text, Platform, StatusBar, Modal} from 'react-native';
+import {StyleSheet, View, ImageBackground, Image, Text, Platform, StatusBar, Modal} from 'react-native';
 import {Calendar, CalendarList, Agenda} from 'react-native-calendars';
 import { useSelector} from 'react-redux';
+import { Button, Card } from 'react-native-elements';
 import {LocaleConfig} from 'react-native-calendars';
 
 LocaleConfig.locales['gr'] = {
@@ -69,20 +70,19 @@ function ResultScreen({ navigation, route  }) {
     return (
         <ImageBackground style={styles.imageStyle} source={require("../assets/background.jpg")}>
             <View >
+            <Text style={styles.mainText}>Με μαύρο εμφανίζονται οι μέρες που βρίσκεσαι μέσα στο στρατόπεδο ενώ με μπλε αυτές που είσαι εκτός!</Text>
             <Calendar
                 current={date}
                 markingType={'period'}
                 markedDates={datesOfArmyCalendar}
                 style={{
-                   
                     height: 380,
-                    backgroundColor: 'rgba(0, 0, 0, 0.8)'
+                    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                    marginBottom:30
                   }}
             />
-            <Image
-                        style={styles.underHeaderImage}
-                        source={require(("../assets/calendar.png"))}
-                    />
+             <Button  title="Πίσω στην αρχική" type="solid" icon={{name: "arrow-left", size: 25, color: "white",}} iconLeft="true" buttonStyle={styles.button} titleStyle={styles.titleButton} onPress={() =>
+                        navigation.navigate('Home')}/>
             </View>
         </ImageBackground>
     );
@@ -96,13 +96,44 @@ const styles = StyleSheet.create({
         backgroundColor:"#134c90",
         
     },
-    underHeaderImage:{
-        width:"40%", 
-        height:"30%",
-        left:120,
+    button:{
+        marginTop:10,
         marginBottom:20,
-        marginTop:40
+        backgroundColor: "#008cd1",
+        borderWidth: 1,
+        borderColor:"black",
+        width: 200,
+        left:105
         
+    },
+    titleButton:{
+        fontWeight: '600',
+        color: '#fff',
+        marginRight:20,
+        fontSize: 15,
+        fontFamily: 'Roboto',
+        textShadowColor: 'rgba(0, 0, 0, 1)',
+        textShadowOffset: {width: 1, height: 1},
+        textShadowRadius: 3
+        
+    },
+    mainText:{
+        fontWeight: '700',
+        fontFamily: 'Roboto',
+        textAlign:"center",
+        color:"white",
+        marginBottom: 30,
+        fontSize: 15,
+        fontStyle:'italic',
+        textShadowColor: 'rgba(0, 0, 0, 1)',
+        textShadowOffset: {width: 1, height: 1},
+        textShadowRadius: 3
+    },
+    underHeaderImage:{
+        width:125, 
+        height:150,
+        left:140,
+        marginTop:30
     },
     basicBackground : {
         flex: 1, 
@@ -110,24 +141,12 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         flexDirection: "column",
         
-
     },
     backgroundImage:{
         height:1000, 
         width:1000,   
         
     },
-    calendar:{
-        marginTop: 120,
-        height:400,
-        borderBottomWidth:2,
-        borderBottomColor:'#008cd1',
-        borderBottomLeftRadius: 4,
-        borderBottomRightRadius : 4,
-        opacity:0.8
-
-        
-    }
 })
 
 

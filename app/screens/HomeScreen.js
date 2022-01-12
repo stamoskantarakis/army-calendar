@@ -29,15 +29,16 @@ const styles = StyleSheet.create({
         
     },
     underHeaderImage:{
-        width:"100%", 
-        height:"45%",
+        width: 245, 
+        height:265,
         left:0,
-        marginBottom:20,
-        marginTop:20
+        marginBottom:30,
+        marginTop:40
         
     },
     button:{
-        marginTop:50,
+        marginTop:60,
+        marginBottom:100,
         backgroundColor: "#008cd1",
         borderWidth: 1,
         borderColor:"black",

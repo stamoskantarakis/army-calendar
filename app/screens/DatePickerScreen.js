@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
         fontFamily: 'Roboto',
         textAlign:"center",
         color:"white",
-        marginTop: 30,
+        marginTop: 40,
         fontSize: 15,
         right:4,
         fontStyle:'italic',
