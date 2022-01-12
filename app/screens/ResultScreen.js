@@ -41,7 +41,9 @@ function ResultScreen({ navigation, route  }) {
     let numberOfDaysOut = parseInt(daysOut);
     let date = new Date(firstDate);
     let newdateOfUser = new Date(date);
-    for(let j=0; j<60; j++){
+    let loops = 365/(numberOfDaysOut+numberOfDaysIn);
+
+    for(let j=0; j<loops; j++){
         for(let i=0; i<=numberOfDaysIn; i++){
             if(i===0){
                 newdateOfUser.setDate(newdateOfUser.getDate());
@@ -62,8 +64,6 @@ function ResultScreen({ navigation, route  }) {
             let temp = newdateOfUser.toISOString().substring(0, 10);
             datesOfArmyCalendar = {...datesOfArmyCalendar,[temp] :{disabled: true, startingDay: true, color: '#008cd1', endingDay: true}};
         }
-
-       
     }
    
     return (
@@ -74,8 +74,7 @@ function ResultScreen({ navigation, route  }) {
                 markingType={'period'}
                 markedDates={datesOfArmyCalendar}
                 style={{
-                    borderWidth: 1,
-                    borderColor: "#008cd1",
+                   
                     height: 380,
                     backgroundColor: 'rgba(0, 0, 0, 0.8)'
                   }}

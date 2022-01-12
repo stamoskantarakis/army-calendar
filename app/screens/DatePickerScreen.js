@@ -143,12 +143,19 @@ const styles = StyleSheet.create({
         marginLeft: 15,
         fontSize: 14,
         fontFamily: 'Roboto',
+        textShadowColor: 'rgba(0, 0, 0, 1)',
+        textShadowOffset: {width: 1, height: 1},
+        textShadowRadius: 3
         
     },
     input:{
         marginTop:20,
         textAlign: "center",
-        color:"#0c62c5"
+        color:"white",
+        fontWeight:"bold",
+        textShadowColor: 'rgba(0, 0, 0, 1)',
+        textShadowOffset: {width: 1, height: 1},
+        textShadowRadius: 3
     },
 
 })
