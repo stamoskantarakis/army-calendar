@@ -1,12 +1,12 @@
 {
   "expo": {
-    "name": "ArmyServiceCalculator",
-    "slug": "ArmyServiceCalculator",
+    "name": "Το Ημερολόγιο του Σμηνίτη",
+    "slug": "ttpctoimerologiotousminiti",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./app/assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./app/assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -20,9 +20,11 @@
       "supportsTablet": true
     },
     "android": {
+      "package":"ttpc.toimerologiotousminiti",
+      "versionCode":1,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "foregroundImage": "./app/assets/adaptive-icon.png",
+        "backgroundColor": "#008cd1"
       }
     },
     "web": {
