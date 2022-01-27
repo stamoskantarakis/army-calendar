@@ -129,12 +129,6 @@ const styles = StyleSheet.create({
         textShadowOffset: {width: 1, height: 1},
         textShadowRadius: 3
     },
-    underHeaderImage:{
-        width:125, 
-        height:150,
-        left:140,
-        marginTop:30
-    },
     basicBackground : {
         flex: 1, 
         alignItems: 'center', 

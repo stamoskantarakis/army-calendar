@@ -1,19 +1,13 @@
 import * as React from 'react';
-// import { StatusBar } from 'expo-status-bar';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducer from './Reducer';
 import { StyleSheet, Text, View, Image } from 'react-native';
-// import { Provider } from 'react-redux';
-// import { createStore } from 'redux';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-// // import mainReducer from './FriendsReducer';
 import HomeScreen from './app/screens/HomeScreen';
 import DatePickerScreen from './app/screens/DatePickerScreen'
 import ResultScreen from './app/screens/ResultScreen'
-
-// import 'react-native-gesture-handler';
 
 
 const store = createStore(
@@ -35,26 +29,26 @@ export default function App() {
         },
         headerTintColor: '#fff',
         headerTitleStyle: {
+          
           fontWeight: 'bold',
-          marginLeft:50,
-          fontStyle:'italic'
+          fontStyle:'italic',
         },
       }}>
       <Stack.Screen
           name="Home"
           component={HomeScreen}
           
-          options={{ title: 'Το Ημερολόγιο του Σμηνίτη' }}
+          options={{ title: 'Το Ημερολόγιο του Σμηνίτη',headerTitleAlign: "center", }}
         />
       <Stack.Screen
         name="DatePicker"
         component={DatePickerScreen}
-        options={{ title: '' }}
+        options={{ title: 'Συμπλήρωσε τα παρακάτω',headerTitleAlign: "center", }}
       />
       <Stack.Screen
         name="Result"
         component={ResultScreen}
-        options={{ title: 'Το Ημερολόγιο σου' }}
+        options={{ title: 'Το Ημερολόγιο σου',headerTitleAlign: "center", }}
       />
     </Stack.Navigator>
   </NavigationContainer>

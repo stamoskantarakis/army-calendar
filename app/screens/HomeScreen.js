@@ -22,6 +22,9 @@ function HomeScreen({ navigation, route }) {
 
 const styles = StyleSheet.create({
     backgroundImageStyle:{
+        display:"flex",
+        justifyContent: "center",
+        textAlign:"center",
         width:"100%", 
         height:"100%",
         justifyContent: 'center',
@@ -29,14 +32,20 @@ const styles = StyleSheet.create({
         
     },
     underHeaderImage:{
+        display:"flex",
+        justifyContent: "center",
         width: 245, 
         height:265,
         left:0,
         marginBottom:30,
         marginTop:40
+
         
     },
     button:{
+        display:"flex",
+        justifyContent: "center",
+        textAlign:"center",
         marginTop:60,
         marginBottom:100,
         backgroundColor: "#008cd1",
@@ -63,13 +72,14 @@ const styles = StyleSheet.create({
              
     },
     mainText:{
+        display:"flex",
+        justifyContent: "center",
+        textAlign:"center",
         fontWeight: '700',
         fontFamily: 'Roboto',
-        textAlign:"center",
         color:"white",
         marginTop: 10,
         fontSize: 15,
-        right:4,
         fontStyle:'italic',
         textShadowColor: 'rgba(0, 0, 0, 1)',
         textShadowOffset: {width: 1, height: 1},
