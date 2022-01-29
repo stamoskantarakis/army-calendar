@@ -85,6 +85,7 @@ const styles = StyleSheet.create({
         width:"100%", 
         height:"100%",
         backgroundColor:"#008cd1",
+        alignSelf: 'center',
         
     },
     basicBackground : {
@@ -94,7 +95,7 @@ const styles = StyleSheet.create({
         flexDirection: "column",
         backgroundColor: "#008cd1",
         
-
+        
     },
     mainText:{
         display:"flex",
@@ -108,7 +109,8 @@ const styles = StyleSheet.create({
         fontStyle:'italic',
         textShadowColor: 'rgba(0, 0, 0, 1)',
         textShadowOffset: {width: 1, height: 1},
-        textShadowRadius: 3
+        textShadowRadius: 3,
+        alignSelf: 'center',
         
         
     },
@@ -119,10 +121,12 @@ const styles = StyleSheet.create({
         borderColor:"black",
         width: 120,
         height:42,
-        display:"flex",
-        textAlign:"center",
+        // display:"flex",
+        // textAlign:"center",
+        // justifyContent: 'center',
         justifyContent: 'center',
-        marginHorizontal: 145,
+        alignSelf: 'center',
+      
         
 
         
@@ -136,7 +140,8 @@ const styles = StyleSheet.create({
         borderColor:"black",
         width: 120,
         height:42,
-        marginHorizontal: 145,
+        justifyContent: 'center',
+        alignSelf: 'center',
 
         
     },
@@ -153,6 +158,7 @@ const styles = StyleSheet.create({
         textAlign:"center",
         justifyContent: 'center',
         
+        
     },
     input:{
         textAlign:"center",
@@ -161,7 +167,9 @@ const styles = StyleSheet.create({
         fontWeight:"bold",
         textShadowColor: 'rgba(0, 0, 0, 1)',
         textShadowOffset: {width: 1, height: 1},
-        textShadowRadius: 3
+        textShadowRadius: 3,
+        justifyContent: 'center',
+        alignSelf: 'center',
     },
 
 })

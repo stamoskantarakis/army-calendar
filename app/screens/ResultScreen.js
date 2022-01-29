@@ -109,7 +109,8 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor:"black",
         width: 200,
-        marginHorizontal: 105,
+        justifyContent: 'center',
+        alignSelf: 'center',
         
     },
     titleButton:{

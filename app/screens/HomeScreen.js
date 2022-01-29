@@ -52,6 +52,8 @@ const styles = StyleSheet.create({
         borderColor:"black",
         width: 120,
         marginHorizontal: 60,
+        justifyContent: 'center',
+        alignSelf: 'center',
         
     },
     titleButton:{
@@ -82,7 +84,8 @@ const styles = StyleSheet.create({
         fontStyle:'italic',
         textShadowColor: 'rgba(0, 0, 0, 1)',
         textShadowOffset: {width: 1, height: 1},
-        textShadowRadius: 3
+        textShadowRadius: 3,
+        alignSelf: 'center',
         
         
     }
