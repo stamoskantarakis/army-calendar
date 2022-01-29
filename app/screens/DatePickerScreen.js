@@ -37,12 +37,6 @@ function DatePickerScreen({ navigation, route  }) {
     const showDatepicker = () => {
       showMode('date');
     };
-  
-    const showTimepicker = () => {
-      showMode('time');
-    };
-
-   
 
     return (
         <ImageBackground style={styles.imageStyle} source={require("../assets/background.jpg")}>
@@ -75,7 +69,7 @@ function DatePickerScreen({ navigation, route  }) {
                 placeholder="Συμπλήρωσε"
                 keyboardType="numeric"
             />
-             <Button onPress={showDatepicker} title="Συνέχεια" type="solid" icon={{name: "arrow-right",type: 'font-awesome', size: 10, color: "white",}} iconRight="true" buttonStyle={styles.nextButton} titleStyle={styles.titleButton}
+            <Button onPress={showDatepicker} title="Συνέχεια" type="solid" icon={{name: "arrow-right",type: 'font-awesome', size: 10, color: "white",}} iconRight="true" buttonStyle={styles.nextButton} titleStyle={styles.titleButton}
               onPress={() =>
                         onFinalButtonPress()}/>
             </View>
@@ -87,9 +81,9 @@ const styles = StyleSheet.create({
     imageStyle:{
         display:"flex",
         textAlign:"center",
+        justifyContent: 'center',
         width:"100%", 
         height:"100%",
-        justifyContent: 'center',
         backgroundColor:"#008cd1",
         
     },
@@ -108,7 +102,6 @@ const styles = StyleSheet.create({
         textAlign:"center",
         fontWeight: '700',
         fontFamily: 'Roboto',
-        textAlign:"center",
         color:"white",
         marginTop: 40,
         fontSize: 15,
@@ -126,39 +119,44 @@ const styles = StyleSheet.create({
         borderColor:"black",
         width: 120,
         height:42,
-        left:140,
+        display:"flex",
+        textAlign:"center",
+        justifyContent: 'center',
+        marginHorizontal: 145,
+        
 
         
     },
     nextButton:{
         display:"flex",
-        justifyContent: "center",
-        textAlign:"center",
-        marginTop:120,
+        justifyContent: 'center',
+        marginTop:30,
         backgroundColor: "#008cd1",
         borderWidth: 1,
         borderColor:"black",
         width: 120,
         height:42,
-        left:140,
+        marginHorizontal: 145,
 
         
     },
     titleButton:{
         fontWeight: '600',
         color: '#fff',
-        marginLeft: 15,
+        marginLeft: 12,
         fontSize: 14,
         fontFamily: 'Roboto',
         textShadowColor: 'rgba(0, 0, 0, 1)',
         textShadowOffset: {width: 1, height: 1},
-        textShadowRadius: 3
+        textShadowRadius: 3,
+        display:"flex",
+        textAlign:"center",
+        justifyContent: 'center',
         
     },
     input:{
-        
+        textAlign:"center",
         marginTop:20,
-        textAlign: "center",
         color:"white",
         fontWeight:"bold",
         textShadowColor: 'rgba(0, 0, 0, 1)',

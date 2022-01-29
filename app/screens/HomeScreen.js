@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, View, ImageBackground, Image, Text, Platform, StatusBar, ImageBackgroundBase} from 'react-native';
-import { Button, Card } from 'react-native-elements';
+import { Button} from 'react-native-elements';
 
 function HomeScreen({ navigation, route }) {
 
@@ -36,9 +36,8 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         width: 245, 
         height:265,
-        left:0,
         marginBottom:30,
-        marginTop:40
+        marginTop:50
 
         
     },
@@ -52,7 +51,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor:"black",
         width: 120,
-        left:60
+        marginHorizontal: 60,
         
     },
     titleButton:{

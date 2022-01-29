@@ -1,8 +1,8 @@
 import React from 'react';
-import {StyleSheet, View, ImageBackground, Image, Text, Platform, StatusBar, Modal} from 'react-native';
-import {Calendar, CalendarList, Agenda} from 'react-native-calendars';
+import {StyleSheet, View, ImageBackground, Text} from 'react-native';
+import {Calendar} from 'react-native-calendars';
 import { useSelector} from 'react-redux';
-import { Button, Card } from 'react-native-elements';
+import { Button} from 'react-native-elements';
 import {LocaleConfig} from 'react-native-calendars';
 
 LocaleConfig.locales['gr'] = {
@@ -76,9 +76,15 @@ function ResultScreen({ navigation, route  }) {
                 markingType={'period'}
                 markedDates={datesOfArmyCalendar}
                 style={{
-                    height: 380,
-                    backgroundColor: 'rgba(0, 0, 0, 0.8)',
-                    marginBottom:30
+                    height: 400,
+                    backgroundColor: "white",
+                    marginBottom:30,
+                    borderBottomColor:"#011f4b",
+                    borderBottomWidth:2,
+                    borderTopColor:"#011f4b",
+                    borderTopWidth:2
+                    
+                    
                   }}
             />
              <Button  title="Πίσω στην αρχική" type="solid" icon={{name: "arrow-left", size: 25, color: "white",}} iconLeft="true" buttonStyle={styles.button} titleStyle={styles.titleButton} onPress={() =>
@@ -103,7 +109,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor:"black",
         width: 200,
-        left:105
+        marginHorizontal: 105,
         
     },
     titleButton:{
